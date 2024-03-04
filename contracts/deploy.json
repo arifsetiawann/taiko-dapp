@@ -1,0 +1,39 @@
+{
+  "components": [
+    "GameConfigComponent",
+    "ItemPrototypeComponent",
+    "ItemComponent",
+    "PositionComponent",
+    "OwnedByComponent",
+    "RecipeComponent",
+    "OccurrenceComponent",
+    "StakeComponent",
+    "ClaimComponent",
+    "NameComponent"
+  ],
+  "systems": [
+    { "name": "ComponentDevSystem", "writeAccess": ["*"] },
+    { "name": "BulkSetStateSystem", "writeAccess": ["*"] },
+    { "name": "MineSystem", "writeAccess": ["PositionComponent", "OwnedByComponent", "ItemComponent"] },
+    { "name": "BuildSystem", "writeAccess": ["PositionComponent", "OwnedByComponent"] },
+    { "name": "CreativeBuildSystem", "writeAccess": ["PositionComponent", "ItemComponent"] },
+    { "name": "CraftSystem", "writeAccess": ["OwnedByComponent", "ItemComponent"] },
+    { "name": "OccurrenceSystem", "writeAccess": [] },
+    { "name": "StakeSystem", "writeAccess": ["StakeComponent", "OwnedByComponent"] },
+    { "name": "BulkStakeSystem", "writeAccess": ["StakeComponent", "OwnedByComponent"] },
+    { "name": "ClaimSystem", "writeAccess": ["ClaimComponent"] },
+    { "name": "TransferSystem", "writeAccess": ["OwnedByComponent"] },
+    { "name": "BulkTransferSystem", "writeAccess": ["OwnedByComponent"] },
+    { "name": "NameSystem", "writeAccess": ["NameComponent"] },
+    {
+      "name": "InitSystem",
+      "writeAccess": ["GameConfigComponent", "ItemPrototypeComponent", "OccurrenceComponent"],
+      "initialize": "new bytes(0)"
+    },
+    {
+      "name": "Init2System",
+      "writeAccess": ["RecipeComponent"],
+      "initialize": "new bytes(0)"
+    }
+  ]
+}

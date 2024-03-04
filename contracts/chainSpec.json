@@ -1,0 +1,5 @@
+{
+  "chainId": 901,
+  "rpc": "https://l2.op.lattice.xyz",
+  "wsRpc": "wss://l2.op.lattice.xyz"
+}
