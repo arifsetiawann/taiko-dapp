@@ -1,4 +1,4 @@
-# taikoverse
+# taikovrse
 
 An infinite, unstoppable World.
 
